@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+
+    
+
+
+    <aside id="side-bar">
+        <a href="#" class="logo">
+            <img src="logo.png" width="110px">
+        </a>  
+        <ul class="side-menu">
+
+            
+
+            <li class="active"><a href="index.html">
+                <i class="fas fa-home"></i>
+                Inicio</a>
+            </li>
+
+            <li><a href="movimientos.html">
+                <i class="fas fa-line-chart"></i>
+                Reportes</a>
+            </li>
+            <li><a href="#">
+                <i class="fas fa-users"></i>
+                <span class="usuarios-icon-text">Usuarios</span></a>
+            </li>
+            <li><a href="#">
+                <i class="fas fa-gear"></i>
+                Ajustes</a>
+            </li>
+
+            <!-- <a role="button" id="leave">Salir <i class="fa-solid fa-right-from-bracket"></i></a> -->
+        </ul>
+
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout">
+                    <i class="fas fa-sign-out" style="transform: rotate(180deg);"></i>
+                    Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+
+
+
+    
+
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            
+            <svg id="menu-icon" width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H14M4 18H9" stroke="#363949" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>
+            
+
+            <div class="toggle-night-user-container">
+
+                <div class="toggle-night-mode-container">
+                    <label class="switch" for="toggle">
+                        <input type="checkbox" id="toggle" onclick="toggleMode()">
+                        <span class="slider">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="user-container">
+                    <!-- <span class="notification-red-point"></span> -->
+                    <i class="fas fa-user"></i>   
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- End of Navbar -->
+
+        <main>
+            <div class="header">
+                <div class="left">
+                    <h1>Inicio</h1>
+
+                    <ul class="breadcrumb">
+                        <li><a href="#">Analisis General</a></li>  
+                    </ul>
+                </div>
+                
+                <a href="#" class="add-report">
+                    <svg width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                        <g id="SVGRepo_iconCarrier"> <path d="M4 12H20M12 4V20" stroke="#f6f6f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+                    </svg>
+                    <span>Añadir Reporte</span>
+                </a>
+
+ 
+            </div>
+
+            
+
+
+            <!-- analisis general -->
+            <ul class="general">
+                <li>
+                    <span class="bx">
+                        <i class=' fas  fa fa-coins'></i>
+                        <i class='fas fa-arrow-up' style="margin: 15px 0 0 3px; font-size: 0.7em;"></i>
+                    </span>
+                    
+                    <span class="info">
+                        <h3>
+                            $6,742
+                        </h3>
+                        <!-- <p>Total Sales</p> -->
+                        <p>Ingresos del Dia</p>
+                    </span>
+                </li>
+                <li>
+                    <span class="bx">
+                        <i class=' fas  fa fa-coins'></i>
+                        <i class='fas fa-arrow-down' style="margin: 15px 0 0 3px; font-size: 0.7em;"></i>
+                    </span>
+                    
+                    <span class="info">
+                        <h3>
+                            $6,742
+                        </h3>
+                        <!-- <p>Total Sales</p> -->
+                        <p>Egresos del Dia</p>
+                    </span>
+                </li>
+                <li>
+                    <i class='bx fas fa-line-chart'></i>
+                    <span class="info">
+                        <h3>
+                            $ 14,721
+                        </h3>
+                        <!-- <p>Searches</p> -->
+                        <p>Ingresos del Mes</p>
+                    </span>
+                </li>
+                <!-- <li>
+                    <span class="bx">
+                        <i class=' fas  fa fa-coins'></i>
+                        <i class='fas fa-arrow-down' style="margin: 15px 0 0 3px; font-size: 0.7em;"></i>
+                    </span>
+                    
+                    <span class="info">
+                        <h3>
+                            $6,742
+                        </h3>
+                       
+                        <p>Gastos Totales</p>
+                    </span>
+                </li> -->
+            </ul>
+
+            
+            <!-- End of Insights -->
+
+            <!--  movimientos recientes starts -->
+
+            <div class="movimientos-notas-container">
+
+                <div class="movimientos">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Movimientos Recientes</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Monto $</th>
+                                <th>Monto Bs</th>
+                                <th>Fecha</th>
+                                <th>Movimiento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>300$</p>
+                                </td>
+                                <td>
+                                    <p>69959 Bs.</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="movimiento ingreso">Ingreso</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>100$</p>
+                                </td>
+                                <td>
+                                    <p>54359 Bs.</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="movimiento ingreso">Ingreso</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>10$</p>
+                                </td>
+                                <td>
+                                    <p>4359 Bs.</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="movimiento egreso">Egreso</span></td>
+                            </tr>
+                            <!-- <tr>
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/profile-1.jpg">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>14-08-2023</td>
+                                <td><span class="status process">Processing</span></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ends movimientos recientes ends -->
+
+                <!-- Notas starts -->
+                <div class="notas">
+                    
+                    <div class="header">
+                        <i class='bx bx-note'></i>
+                        <h3>Ingresos totales $</h3>
+                        <i class='bx bx-filter'></i>
+                        <i class='bx bx-plus'></i>
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="doughnutChart" style="width: 400px; height: 300px"></canvas>
+                    </div>
+
+                    <!-- <ul class="task-list">
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Pagarle a Juan</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-check-circle'></i>
+                                <p>Cobrarle a Pedro</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                        <li class="completed">
+                            <div class="task-title">
+                                <i class='bx bx-x-circle'></i>
+                                <p>Pagar el Agua</p>
+                            </div>
+                            <i class='bx bx-dots-vertical-rounded'></i>
+                        </li>
+                    </ul> -->
+                </div>
+
+                <!-- End of Notas-->
+
+            </div>
+
+            
+
+        </main>
+
+
+
+    </div>
+
+    
+    <div class="overlay" data-overlay data-nav-toggler>
+        <div href="#" class="arrow-container">
+            <span>Volver</span>
+            <svg class="arrow-icon" width="currentWidth" height="currentHeight" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+                <g id="SVGRepo_iconCarrier"> <path d="M12 6V18M12 18L7 13M12 18L17 13" stroke="#f6f6f9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </g>
+            </svg>          
+        </div>
+    </div>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
+<script src="chartjs.min.js"></script>
+<!-- <script src="1chart.min.js"></script> -->
+<script>
+
+
+//esta es la buena
+    
+
+// let doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+
+// let datas = {
+//     value: [14565, 3454],
+//     labels: ['Ingresos', 'Egresos']
+// };
+
+// var myPieChart = new Chart(doughnutChart, {
+//     type: 'doughnut',
+//     data: {
+//         labels: datas.labels,
+//         datasets: [{
+//             label: 'Dataset 1',
+//             data: datas.value,
+//             backgroundColor: ['green', 'red']
+//         }]
+//     },
+//     options: {
+//         responsive: true,
+//         maintainAspectRatio: false,
+//         layout: {
+//             padding: {
+//                 top: 0, // Adjust as needed
+//                 bottom: 20, // Adds space at the bottom, between the chart and the legend
+//                 left: 0, // Adjust as needed
+//                 right: 0 // Adjust as needed
+//             }
+//         },
+//         plugins: {
+//             tooltip: {
+//                 callbacks: {
+//                     label: function (context) {
+//                         let label = context.label || '';
+//                         let value = context.parsed;
+//                         // Format the value with a comma as a thousand separator
+//                         let formattedValue = value.toLocaleString();
+//                         return formattedValue + '% ' + label;
+//                     }
+//                 },
+//                 titleFont: {
+//                     size: 20
+//                 },
+//                 bodyFont: {
+//                     size: 20
+//                 },
+//                 // Position the tooltip at the bottom
+//                 position: 'average',
+//                 // Align the tooltip to the bottom
+//                 yAlign: 'bottom'
+//             },
+//             legend: {
+//                 //display: false,
+//                 position: 'bottom', // Position the legend at the bottom
+//                 labels: {
+//                     font: {
+//                         size: 20 // Adjust the font size as needed
+//                     },
+//                     color: "red"
+//                 }
+//             }
+//         }
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+
+// let datas = {
+//     value: [14565, 3454],
+//     labels: ['Ingresos', 'Egresos']
+// };
+
+// var myPieChart = new Chart(doughnutChart, {
+//     type: 'doughnut',
+//     data: {
+//         labels: datas.labels,
+//         datasets: [{
+//             label: 'Dataset 1',
+//             data: datas.value,
+//             backgroundColor: ['green', 'red']
+//         }]
+//     },
+//     options: {
+//         responsive: true,
+//         maintainAspectRatio: false,
+//         plugins: {
+//             tooltip: {
+//                 callbacks: {
+//                     label: function (context) {
+//                         let label = context.label || '';
+//                         let value = context.parsed;
+//                         return ' ' + label + ': ' + value + ' $';
+//                     }
+//                 },
+//                 titleFont: {
+//                     size: 20
+//                 },
+//                 bodyFont: {
+//                     size: 20
+//                 }
+//             },
+//             legend: {
+//                 labels: {
+//                     font: {
+//                         size: 20 // Adjust the font size as needed
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// });
+
+
+    
+// let doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+
+// let datas = {
+//     value: [14565, 3454],
+//     labels: ['Ingresos', 'Egresos'],
+//     others: ['Other Data 1', 'Other Data 2'] // Assuming you have an 'others' array for demonstration
+// };
+
+// var myPieChart = new Chart(doughnutChart, {
+//     type: 'doughnut',
+//     data: {
+//         labels: datas.labels,
+//         datasets: [{
+//             label: 'Dataset 1',
+//             data: datas.value,
+//             backgroundColor: ['green', 'red']
+//         }]
+//     },
+//     options: {
+//         responsive: true,
+//         maintainAspectRatio: false,
+//         plugins: {
+//             tooltip: {
+//                 callbacks: {
+//                     label: function (context) {
+//                         let label = context.label || '';
+//                         let value = context.parsed;
+//                         let otherdata = datas.others[context.dataIndex]; // Assuming 'others' is part of your data structure
+//                         return ' ' + label + ': ' + value + '% ' + otherdata;
+//                     }
+//                 },
+//                 titleFont: {
+//                     size: 20
+//                 },
+//                 bodyFont: {
+//                     size: 20
+//                 }
+//             },
+//             legend: {
+//                 labels: {
+//                     font: {
+//                         size: 20 // Adjust the font size as needed
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // let myDoughnutChart = new Chart(doughnutChart, {
+    //         type: 'doughnut',
+    //         data: {
+    //             datasets: [{
+    //                 data: [14721, 4000],
+    //                 //backgroundColor: ['#f3545d','#fdaf4b']
+    //                 backgroundColor: ['green','red']
+    //             }],
+
+    //             labels: [
+    //             'ingresos',
+    //             'egresos'
+    //             ]
+    //         },
+    //         options: {
+    //             hover: {
+    //                 mode: 'index',
+    //                 label: {
+    //                   fontSize : 30  
+    //                 }
+    //             },
+    //             responsive: true, 
+    //             maintainAspectRatio: false,
+    //             legend : {
+    //                 display: true,
+    //                 position: 'bottom',
+    //                 labels: {
+    //                     fontSize : 24
+    //                 }
+    //             },
+    //             layout: {
+    //                 padding: {
+    //                     left: 20,
+    //                     right: 20,
+    //                     top: 20,
+    //                     bottom: 20
+    //                 }
+    //             },
+    //         }
+    //     });
+
+
+
+</script>
+    <script src="main.js"></script>
+</body>
+</html>
